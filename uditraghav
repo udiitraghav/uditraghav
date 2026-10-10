@@ -1,0 +1,729 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1b">
+
+  <title>Udit Raghav | Accountant & Accounts Professional</title>
+
+  <meta name="description"
+        content="Official portfolio of Udit Raghav, an accounts professional skilled in accounting, GST, Tally, billing and Microsoft Excel.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #080d1b;
+      --panel: #10182b;
+      --text: #f3f6ff;
+      --muted: #a3aec5;
+      --accent: #76a9ff;
+      --purple: #b69cff;
+      --border: rgba(255,255,255,.10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    .glow {
+      position: fixed;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      filter: blur(110px);
+      opacity: .13;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .glow.one {
+      background: #4387ff;
+      top: 0;
+      left: -100px;
+    }
+
+    .glow.two {
+      background: #9b5cff;
+      right: -100px;
+      top: 45%;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(8,13,27,.86);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 23px;
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 23px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover,
+    .social a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      min-height: 610px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 95px 0 85px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(43px, 8vw, 78px);
+      line-height: 1.08;
+      letter-spacing: -3px;
+      max-width: 850px;
+    }
+
+    h1 span {
+      background: linear-gradient(100deg, #76a9ff, #c1a5ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 650px;
+      margin-top: 25px;
+      font-size: 16px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      padding: 12px 21px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 13px;
+      transition: .25s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn.primary {
+      color: #081020;
+      background: linear-gradient(110deg, #76a9ff, #b69cff);
+      border: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(100,140,255,.15);
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-label {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(30px, 5vw, 43px);
+      line-height: 1.2;
+      margin: 12px 0 18px;
+      letter-spacing: -1px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 690px;
+      margin-bottom: 32px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      padding: 25px;
+      background: linear-gradient(145deg, rgba(19,29,51,.92), rgba(12,19,35,.95));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      transition: transform .25s, border-color .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(118,169,255,.5);
+    }
+
+    .icon {
+      font-size: 27px;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      font-size: 17px;
+      margin-bottom: 9px;
+    }
+
+    .card p, .card li {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .card ul {
+      padding-left: 18px;
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 25px;
+      align-items: stretch;
+    }
+
+    .about-copy {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .about-copy p + p {
+      margin-top: 15px;
+    }
+
+    .facts {
+      display: grid;
+      gap: 12px;
+    }
+
+    .fact {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 17px;
+    }
+
+    .fact small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-bottom: 3px;
+    }
+
+    .fact strong {
+      font-size: 14px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+    }
+
+    .skill {
+      padding: 10px 15px;
+      border-radius: 9px;
+      border: 1px solid rgba(118,169,255,.22);
+      background: rgba(118,169,255,.07);
+      color: #d8e4ff;
+      font-size: 13px;
+    }
+
+    .timeline {
+      border-left: 1px solid rgba(118,169,255,.4);
+      margin-left: 7px;
+      padding-left: 25px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 28px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -31px;
+      top: 8px;
+      width: 11px;
+      height: 11px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(118,169,255,.4);
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .contact-box {
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 45px 25px;
+      background: radial-gradient(ellipse at top, rgba(91,120,220,.13), transparent 70%);
+    }
+
+    .contact-box h2 {
+      margin-top: 10px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 25px;
+    }
+
+    .social {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .social a {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      border-radius: 10px;
+      padding: 10px 15px;
+      font-size: 12px;
+      transition: .2s;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .hero {
+        min-height: 530px;
+        padding: 75px 0;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="glow one"></div>
+  <div class="glow two"></div>
+
+  <header>
+    <nav class="container">
+      <a class="logo" href="#home">Udit<span>.</span></a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="eyebrow">Welcome to my professional portfolio</div>
+
+      <h1>
+        Hi, I'm <span>Udit Raghav.</span><br>
+        Accounts & Finance Professional.
+      </h1>
+
+      <p>
+        I am a B.Com graduate with practical exposure to accounting,
+        GST compliance, billing and financial record management.
+        I believe in accuracy, continuous learning and professional growth.
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" href="#about">Discover My Profile ↗</a>
+        <a class="btn" href="mailto:uditraghav0@gmail.com">Contact Me ✉</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container reveal">
+        <div class="section-label">01 / About Me</div>
+        <h2>A little about myself.</h2>
+
+        <div class="about-layout">
+          <div class="about-copy">
+            <p>
+              My name is Udit Raghav. I have completed my Bachelor of
+              Commerce (B.Com) and have gained practical experience
+              working in accounting, including exposure to a CA firm
+              and accounts department responsibilities.
+            </p>
+
+            <p>
+              My work interests include maintaining accounting records,
+              purchase and sales entries, invoice preparation,
+              bank reconciliation, GST return preparation and
+              organizing financial data.
+            </p>
+
+            <p>
+              I aim to build a strong career in accounting by improving
+              my technical knowledge, maintaining accuracy and
+              contributing responsibly to an organization's accounts team.
+            </p>
+          </div>
+
+          <div class="facts">
+            <div class="fact">
+              <small>Education</small>
+              <strong>Bachelor of Commerce (B.Com)</strong>
+            </div>
+
+            <div class="fact">
+              <small>Professional Interest</small>
+              <strong>Accounting & Tax Compliance</strong>
+            </div>
+
+            <div class="fact">
+              <small>Accounting Software</small>
+              <strong>Tally ERP / Tally Prime</strong>
+            </div>
+
+            <div class="fact">
+              <small>Core Focus</small>
+              <strong>Accuracy, Compliance & Learning</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container reveal">
+        <div class="section-label">02 / My Expertise</div>
+        <h2>Skills that I bring.</h2>
+        <p class="section-intro">
+          Accounting knowledge and practical office skills that support
+          organized, reliable and efficient financial operations.
+        </p>
+
+        <div class="skill-list">
+          <span class="skill">📊 Accounting</span>
+          <span class="skill">🧾 Billing & Invoicing</span>
+          <span class="skill">📘 GST Compliance</span>
+          <span class="skill">💻 Tally ERP</span>
+          <span class="skill">💻 Tally Prime</span>
+          <span class="skill">📈 Microsoft Excel</span>
+          <span class="skill">📝 Microsoft Word</span>
+          <span class="skill">🏦 Bank Reconciliation (BRS)</span>
+          <span class="skill">🛒 Purchase & Sales Entries</span>
+          <span class="skill">📑 GSTR-1 & GSTR-3B</span>
+          <span class="skill">🔎 GSTR-2B Reconciliation</span>
+          <span class="skill">📂 Record Management</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container reveal">
+        <div class="section-label">03 / What I Work On</div>
+        <h2>My accounting toolkit.</h2>
+
+        <div class="grid">
+          <article class="card">
+            <div class="icon">📚</div>
+            <h3>Bookkeeping</h3>
+            <p>
+              Recording transactions, organizing ledgers and helping
+              maintain accurate accounting records.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🧾</div>
+            <h3>GST & Returns</h3>
+            <p>
+              Working with sales data, purchase reconciliation,
+              GST return preparation and related compliance tasks.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🏦</div>
+            <h3>Bank Reconciliation</h3>
+            <p>
+              Comparing bank statements with accounting records
+              and investigating differences.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">📊</div>
+            <h3>Excel & Reporting</h3>
+            <p>
+              Organizing financial data, preparing spreadsheets
+              and supporting routine reporting tasks.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">💳</div>
+            <h3>Payables & Receivables</h3>
+            <p>
+              Supporting outstanding balance tracking and
+              payment and collection records.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">📁</div>
+            <h3>Documentation</h3>
+            <p>
+              Maintaining invoices, supporting documents
+              and organized accounting files.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container reveal">
+        <div class="section-label">04 / Professional Journey</div>
+        <h2>Learning through experience.</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Accounts Department</h3>
+            <p>
+              Involved in accounting-related work, billing,
+              financial records and routine office tasks.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>CA Firm Exposure</h3>
+            <p>
+              Gained practical exposure to accounting processes,
+              GST-related work and compliance documentation.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Continuous Professional Development</h3>
+            <p>
+              Building knowledge of accounting software,
+              taxation, reconciliations and financial reporting.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container reveal">
+        <div class="contact-box">
+          <div class="section-label">05 / Let's Connect</div>
+          <h2>Let's build something professional.</h2>
+
+          <p>
+            I am interested in opportunities where I can apply my
+            accounting knowledge, learn from experienced professionals
+            and grow in my career.
+          </p>
+
+          <a class="btn primary"
+             href="mailto:uditraghav0@gmail.com?subject=Professional%20Opportunity">
+            ✉ Email Me
+          </a>
+
+          <div class="social">
+            <a href="https://www.instagram.com/thakur_udit_raghav/"
+               target="_blank" rel="noopener noreferrer">
+              Instagram ↗
+            </a>
+
+            <a href="https://www.facebook.com/search/top?q=Udit%20Raghav"
+               target="_blank" rel="noopener noreferrer">
+              Facebook ↗
+            </a>
+
+            <a href="mailto:uditraghav0@gmail.com">
+              Email ↗
+            </a>
+
+            <a href="https://www.linkedin.com/search/results/people/?keywords=Udit%20Raghav"
+               target="_blank" rel="noopener noreferrer">
+              LinkedIn ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Udit Raghav. Built with dedication.
+      <br>
+      Learning today. Growing every day.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach((element) => {
+      observer.observe(element);
+    });
+  </script>
+</body>
+</html>
